@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../../../store/store';
 import { createJournalEntry } from '../../../../store/thunks/createJournalEntry';
-import { FormField } from '../../../FormField/FormField';
+import { FormField } from '../../../ui/FormField/FormField';
 
 type FormValues = {
   content: string;

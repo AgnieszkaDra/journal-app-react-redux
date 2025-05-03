@@ -15,22 +15,15 @@ type FormFieldProps = {
 } & React.InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement>;
 
 export const FormField = ({
-  label,
   type,
   nameInput,
-  errors = {},
-  touched = {},
   rows,
-  icon,
   ...rest
 }: FormFieldProps) => {
   const isTextArea = type === 'textarea';
-  const hasError = touched[nameInput] && errors[nameInput];
-
+  
   return (
     <div style={{ position: 'relative', width: '100%' }}>
-     {/* <StyledLabel htmlFor={nameInput}>{label}</StyledLabel> */}
-
       {isTextArea ? (
         <StyledTextArea
           id={nameInput}
@@ -40,9 +33,6 @@ export const FormField = ({
       ) : (
         ''
       )}
-
-      {/* {icon && <StyledIcon>{icon}</StyledIcon>}
-      {hasError && <ErrorText>{errors[nameInput]?.message}</ErrorText>}  */}
     </div>
   );
 };
