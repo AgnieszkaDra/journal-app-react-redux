@@ -26,7 +26,7 @@ const journalSlice = createSlice({
         state.entries.push(payload);
         saveEntriesToStorage(state.entries);
       })
-      .addCase(createJournalEntry.rejected, (state, action) => {
+      .addCase(createJournalEntry.rejected, (_, action) => {
         console.error('Failed to create entry:', action.error.message);
       });
   },
