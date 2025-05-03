@@ -1,0 +1,1 @@
+export { default as JournalForm } from './Forms/Journal/JournalForm';
